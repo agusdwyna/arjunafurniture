@@ -20,7 +20,7 @@ export default function ArjunaFurniture() {
 
   return (
     <div>
-      <div className="bg-[#f8f7f6] dark:bg-[#211911] text-[#171411] dark:text-white min-h-screen">
+      <div className="bg-[#f8f7f6] text-[#171411] min-h-screen">
        {/* Header */}
 <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#8B7355]/10">
   <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -88,55 +88,42 @@ export default function ArjunaFurniture() {
 </section>
 
 
-      {/* Product Showcase */}
-<section className="py-20 md:py-28 px-6 max-w-7xl mx-auto">
-  
-  {/* Header */}
-  <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-20 gap-6">
-    
-    <div className="max-w-xl">
-      <span className="text-[#8B7355] font-semibold tracking-[0.35em] uppercase text-xs block mb-4">
-        The Selection
-      </span>
+        {/* Product Showcase */}
+        <section className="py-24 px-4 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+            <div className="max-w-xl">
+              <span className="text-[#8B7355] font-bold tracking-[0.3em] uppercase text-sm block mb-4">
+                The Selection
+              </span>
+              <h2 className="text-4xl font-bold">Our Signature Collection</h2>
+            </div>
+            <p className="text-[#877564] max-w-xs text-sm uppercase tracking-widest leading-relaxed">
+              Curated pieces designed to bring timeless luxury to your home.
+            </p>
+          </div>
 
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-        Our Signature Collection
-      </h2>
-    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Product Card 1 */}
+            <ProductCard
+              image={img1}
+              badge="New Arrival"
+              title="Modern Built-In Storage Cabinet"
+              description="Custom-built storage cabinet with clean vertical lines and natural wood finish. Designed to maximize space efficiency while maintaining a warm and elegant aesthetic. Perfect for contemporary living rooms or multifunctional spaces."
+              whatsappMessage="Halo! Saya tertarik dengan Modern Built-In Storage Cabinet. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
+            />
 
-    <p className="text-[#877564] max-w-sm text-sm uppercase tracking-widest leading-relaxed text-left md:text-right">
-      Curated pieces designed to bring timeless luxury to your home.
-    </p>
-
-  </div>
-
-  {/* Product Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-    
-    {/* Product Card 1 */}
-    <ProductCard
-      image={img1}
-      badge="New Arrival"
-      title="Modern Built-In Storage Cabinet"
-      description="Custom-built storage cabinet with clean vertical lines and natural wood finish. Designed to maximize space efficiency while maintaining a warm and elegant aesthetic. Perfect for contemporary living rooms or multifunctional spaces."
-      whatsappMessage="Halo! Saya tertarik dengan Modern Built-In Storage Cabinet. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
-    />
-
-    {/* Product Card 2 */}
-    <ProductCard
-      image={img3}
-      title="Elegant Arch Wardrobe Set"
-      description="A custom wardrobe featuring a signature arched vanity design combined with open shelving and hanging space. Crafted with premium wood textures to create a sophisticated yet functional bedroom statement piece."
-      whatsappMessage="Halo! Saya tertarik dengan Elegant Arch Wardrobe Set. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
-    />
-
-  </div>
-
-</section>
-
+            {/* Product Card 2 */}
+            <ProductCard
+              image={img3}
+              title="Elegant Arch Wardrobe Set"
+              description="A custom wardrobe featuring a signature arched vanity design combined with open shelving and hanging space. Crafted with premium wood textures to create a sophisticated yet functional bedroom statement piece."
+              whatsappMessage="Halo! Saya tertarik dengan Elegant Arch Wardrobe Set. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
+            />
+          </div>
+        </section>
 
         {/* Why Choose Us */}
-        <section className="bg-[#fdfcfb] dark:bg-[#211911]/50 py-24">
+        <section className="bg-[#fdfcfb] py-24">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               <FeatureCard icon="✓" title="Premium Quality" description="Only the finest sustainably sourced hardwoods." />
@@ -167,43 +154,34 @@ export default function ArjunaFurniture() {
 
         {/* Gallery Grid */}
         <section className="py-24 px-4">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:h-[800px]">
-      
-      {/* Left Large Image */}
-      <div
-        className="md:col-span-8 aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${img4})`
-        }}
-      />
-
-      {/* Right Side Images */}
-      <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-6">
-        
-        <div
-          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${img6})`
-          }}
-        />
-
-        <div
-          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${img7})`
-          }}
-        />
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+              <div
+                className="md:col-span-8 h-64 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${img4})`
+                }}
+              />
+              <div className="md:col-span-4 grid grid-rows-2 gap-6">
+                <div
+                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${img6})`
+                  }}
+                />
+                <div
+                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${img7})`
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-[#8B7355] dark:bg-[#8B7355]/90 text-white text-center px-4">
+        <section className="py-24 bg-[#8B7355] text-white text-center px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Transform Your Space Today</h2>
             <p className="text-lg text-white/90 mb-12 font-light">
@@ -221,7 +199,7 @@ export default function ArjunaFurniture() {
         </section>
 
         {/* Simple Footer */}
-        <footer className="bg-white dark:bg-[#211911] py-12 px-4 border-t border-[#8B7355]/10">
+        <footer className="bg-white py-12 px-4 border-t border-[#8B7355]/10">
           <div className="max-w-7xl mx-auto">
             {/* Main Footer Content */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
@@ -336,7 +314,7 @@ function ProductCard({ image, badge, title, description, whatsappMessage }) {
 function FeatureCard({ icon, title, description }) {
   return (
     <div className="text-center group">
-      <div className="w-16 h-16 bg-white dark:bg-[#211911] rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-[#8B7355]/5 group-hover:bg-[#8B7355] group-hover:text-white transition-all duration-300">
+      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-[#8B7355]/5 group-hover:bg-[#8B7355] group-hover:text-white transition-all duration-300">
         <span className="text-3xl">{icon}</span>
       </div>
       <h4 className="font-bold text-lg mb-2">{title}</h4>
