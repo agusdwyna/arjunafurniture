@@ -1,5 +1,14 @@
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 
+// Import semua gambar
+import logo from "/logo.png";
+import heroImage from "/2.jpeg";
+import img1 from "/1.jpeg";
+import img3 from "/3.jpeg";
+import img4 from "/4.jpeg";
+import img6 from "/6.jpeg";
+import img7 from "/7.jpeg";
+
 export default function ArjunaFurniture() {
   // Fungsi untuk membuat link WhatsApp dengan pesan custom
   const createWhatsAppLink = (message = "") => {
@@ -19,7 +28,7 @@ export default function ArjunaFurniture() {
     {/* Logo */}
    <div className="flex items-center">
   <img
-    src={`${import.meta.env.BASE_URL}logo.png`}
+    src={logo}
     alt="Arjuna Furniture Logo"
     className="h-10 w-auto object-contain"
   />
@@ -43,11 +52,9 @@ export default function ArjunaFurniture() {
     {/* Background Image */}
     <div
       className="absolute inset-0 bg-cover bg-center"
-    
-
       style={{
-  backgroundImage: `url(${import.meta.env.BASE_URL}2.jpeg)`
-}}
+        backgroundImage: `url(${heroImage})`
+      }}
     />
 
     {/* Black Overlay */}
@@ -98,8 +105,7 @@ export default function ArjunaFurniture() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Product Card 1 */}
             <ProductCard
-              image={`${import.meta.env.BASE_URL}1.jpeg`}
-
+              image={img1}
               badge="New Arrival"
               title="Modern Built-In Storage Cabinet"
               description="Custom-built storage cabinet with clean vertical lines and natural wood finish. Designed to maximize space efficiency while maintaining a warm and elegant aesthetic. Perfect for contemporary living rooms or multifunctional spaces."
@@ -108,7 +114,7 @@ export default function ArjunaFurniture() {
 
             {/* Product Card 2 */}
             <ProductCard
-                  image={`${import.meta.env.BASE_URL}3.jpeg`}
+              image={img3}
               title="Elegant Arch Wardrobe Set"
               description="A custom wardrobe featuring a signature arched vanity design combined with open shelving and hanging space. Crafted with premium wood textures to create a sophisticated yet functional bedroom statement piece."
               whatsappMessage="Halo! Saya tertarik dengan Elegant Arch Wardrobe Set. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
@@ -152,25 +158,22 @@ export default function ArjunaFurniture() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
               <div
                 className="md:col-span-8 h-64 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-              style={{
-  backgroundImage: `url(${import.meta.env.BASE_URL}4.jpeg)`
-}}
-
+                style={{
+                  backgroundImage: `url(${img4})`
+                }}
               />
               <div className="md:col-span-4 grid grid-rows-2 gap-6">
                 <div
                   className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-               style={{
-  backgroundImage: `url(${import.meta.env.BASE_URL}6.jpeg)`
-}}
-
+                  style={{
+                    backgroundImage: `url(${img6})`
+                  }}
                 />
                 <div
                   className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                 style={{
-  backgroundImage: `url(${import.meta.env.BASE_URL}7.jpeg)`
-}}
-
+                  style={{
+                    backgroundImage: `url(${img7})`
+                  }}
                 />
               </div>
             </div>
@@ -202,12 +205,11 @@ export default function ArjunaFurniture() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
               {/* Logo & Description */}
               <div className="text-center md:text-left">
-                 <img
-       src={`${import.meta.env.BASE_URL}logo.png`}
-
-        alt="Arjuna Furniture Logo"
-        className="h-20 w-auto object-contain"
-      />
+                <img
+                  src={logo}
+                  alt="Arjuna Furniture Logo"
+                  className="h-20 w-auto object-contain"
+                />
                 <p className="text-[#877564] text-sm max-w-md">
                   Exquisite craftsmanship for elegant living
                 </p>
@@ -281,7 +283,7 @@ function ProductCard({ image, badge, title, description, whatsappMessage }) {
       <div className="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 bg-[#fdfcfb]">
         <div
           className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-          style={{ backgroundImage: `url('${image}')` }}
+          style={{ backgroundImage: `url(${image})` }}
         />
         {badge && (
           <div className="absolute top-4 left-4">
