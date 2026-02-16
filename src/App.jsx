@@ -88,39 +88,52 @@ export default function ArjunaFurniture() {
 </section>
 
 
-        {/* Product Showcase */}
-        <section className="py-24 px-4 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
-            <div className="max-w-xl">
-              <span className="text-[#8B7355] font-bold tracking-[0.3em] uppercase text-sm block mb-4">
-                The Selection
-              </span>
-              <h2 className="text-4xl font-bold">Our Signature Collection</h2>
-            </div>
-            <p className="text-[#877564] max-w-xs text-sm uppercase tracking-widest leading-relaxed">
-              Curated pieces designed to bring timeless luxury to your home.
-            </p>
-          </div>
+      {/* Product Showcase */}
+<section className="py-20 md:py-28 px-6 max-w-7xl mx-auto">
+  
+  {/* Header */}
+  <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-20 gap-6">
+    
+    <div className="max-w-xl">
+      <span className="text-[#8B7355] font-semibold tracking-[0.35em] uppercase text-xs block mb-4">
+        The Selection
+      </span>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Product Card 1 */}
-            <ProductCard
-              image={img1}
-              badge="New Arrival"
-              title="Modern Built-In Storage Cabinet"
-              description="Custom-built storage cabinet with clean vertical lines and natural wood finish. Designed to maximize space efficiency while maintaining a warm and elegant aesthetic. Perfect for contemporary living rooms or multifunctional spaces."
-              whatsappMessage="Halo! Saya tertarik dengan Modern Built-In Storage Cabinet. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
-            />
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        Our Signature Collection
+      </h2>
+    </div>
 
-            {/* Product Card 2 */}
-            <ProductCard
-              image={img3}
-              title="Elegant Arch Wardrobe Set"
-              description="A custom wardrobe featuring a signature arched vanity design combined with open shelving and hanging space. Crafted with premium wood textures to create a sophisticated yet functional bedroom statement piece."
-              whatsappMessage="Halo! Saya tertarik dengan Elegant Arch Wardrobe Set. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
-            />
-          </div>
-        </section>
+    <p className="text-[#877564] max-w-sm text-sm uppercase tracking-widest leading-relaxed text-left md:text-right">
+      Curated pieces designed to bring timeless luxury to your home.
+    </p>
+
+  </div>
+
+  {/* Product Grid */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+    
+    {/* Product Card 1 */}
+    <ProductCard
+      image={img1}
+      badge="New Arrival"
+      title="Modern Built-In Storage Cabinet"
+      description="Custom-built storage cabinet with clean vertical lines and natural wood finish. Designed to maximize space efficiency while maintaining a warm and elegant aesthetic. Perfect for contemporary living rooms or multifunctional spaces."
+      whatsappMessage="Halo! Saya tertarik dengan Modern Built-In Storage Cabinet. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
+    />
+
+    {/* Product Card 2 */}
+    <ProductCard
+      image={img3}
+      title="Elegant Arch Wardrobe Set"
+      description="A custom wardrobe featuring a signature arched vanity design combined with open shelving and hanging space. Crafted with premium wood textures to create a sophisticated yet functional bedroom statement piece."
+      whatsappMessage="Halo! Saya tertarik dengan Elegant Arch Wardrobe Set. Bisakah saya mendapatkan info lebih lanjut mengenai harga dan custom design?"
+    />
+
+  </div>
+
+</section>
+
 
         {/* Why Choose Us */}
         <section className="bg-[#fdfcfb] dark:bg-[#211911]/50 py-24">
@@ -154,31 +167,40 @@ export default function ArjunaFurniture() {
 
         {/* Gallery Grid */}
         <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
-              <div
-                className="md:col-span-8 h-64 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${img4})`
-                }}
-              />
-              <div className="md:col-span-4 grid grid-rows-2 gap-6">
-                <div
-                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${img6})`
-                  }}
-                />
-                <div
-                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${img7})`
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:h-[800px]">
+      
+      {/* Left Large Image */}
+      <div
+        className="md:col-span-8 aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${img4})`
+        }}
+      />
+
+      {/* Right Side Images */}
+      <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-6">
+        
+        <div
+          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${img6})`
+          }}
+        />
+
+        <div
+          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${img7})`
+          }}
+        />
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* Final CTA */}
         <section className="py-24 bg-[#8B7355] dark:bg-[#8B7355]/90 text-white text-center px-4">
