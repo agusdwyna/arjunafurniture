@@ -154,31 +154,40 @@ export default function ArjunaFurniture() {
 
         {/* Gallery Grid */}
         <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
-              <div
-                className="md:col-span-8 h-64 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${img4})`
-                }}
-              />
-              <div className="md:col-span-4 grid grid-rows-2 gap-6">
-                <div
-                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${img6})`
-                  }}
-                />
-                <div
-                  className="h-32 md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${img7})`
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:h-[800px]">
+      
+      {/* Left Large Image */}
+      <div
+        className="md:col-span-8 aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${img4})`
+        }}
+      />
+
+      {/* Right Side Images */}
+      <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-6">
+        
+        <div
+          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${img6})`
+          }}
+        />
+
+        <div
+          className="aspect-square md:aspect-auto md:h-auto overflow-hidden rounded-xl bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${img7})`
+          }}
+        />
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* Final CTA */}
         <section className="py-24 bg-[#8B7355] text-white text-center px-4">
